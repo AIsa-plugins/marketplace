@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "aisa",
+  "owner": {
+    "name": "AIsa Team",
+    "email": "developer@aisa.one"
+  },
+  "plugins": [
+    {
+      "name": "aisa-research",
+      "source": "./plugins/aisa-research",
+      "description": "Research across the web, X, YouTube, and Scholar with linked evidence.",
+      "category": "Productivity",
+      "tags": ["research", "search"]
+    }
+  ]
+}

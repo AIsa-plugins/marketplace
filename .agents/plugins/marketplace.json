@@ -1,0 +1,20 @@
+{
+  "name": "aisa",
+  "interface": {
+    "displayName": "Aisa"
+  },
+  "plugins": [
+    {
+      "name": "aisa-research",
+      "source": {
+        "source": "local",
+        "path": "./plugins/aisa-research"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
