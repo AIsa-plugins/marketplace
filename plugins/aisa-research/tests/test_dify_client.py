@@ -1,10 +1,22 @@
 import json
+import sys
 import unittest
 from io import BytesIO
+from pathlib import Path
 from unittest import mock
 from urllib import error
 
-from client import AisaClientError, build_request, execute, parse_extract_urls
+
+DIFY_ROOT = Path(__file__).resolve().parents[1] / "dify"
+sys.path.insert(0, str(DIFY_ROOT))
+
+from aisa_client import (  # noqa: E402
+    DEFAULT_BASE_URL,
+    ClientError,
+    build_request,
+    execute,
+    parse_extract_urls,
+)
 
 
 class FakeResponse:
@@ -25,12 +37,19 @@ class FakeResponse:
 class ClientTests(unittest.TestCase):
     def test_builds_search_request_without_key_in_url(self) -> None:
         request_value = build_request(
-            "tavily_search", {"query": "dify plugins"}, "fake-key"
+            "tavily_search",
+            {"query": "dify plugins"},
+            "fake-key",
+            DEFAULT_BASE_URL,
+            "dify",
         )
         self.assertEqual(
             request_value.full_url, "https://api.aisa.one/apis/v1/tavily/search"
         )
         self.assertEqual(request_value.get_header("Authorization"), "Bearer fake-key")
+        self.assertEqual(
+            request_value.get_header("User-agent"), "dify/aisa-research/0.1.0"
+        )
         self.assertEqual(json.loads(request_value.data), {"query": "dify plugins"})
 
     def test_parses_one_to_three_public_urls(self) -> None:
@@ -39,15 +58,25 @@ class ClientTests(unittest.TestCase):
             ["https://example.com/a", "https://example.org/b"],
         )
 
-    def test_rejects_private_extract_url(self) -> None:
-        with self.assertRaises(AisaClientError):
-            parse_extract_urls("http://127.0.0.1/private")
+    def test_rejects_unsafe_or_excessive_extract_urls(self) -> None:
+        invalid_values = (
+            "http://127.0.0.1/private",
+            "http://user:password@example.com/private",
+            "ftp://example.com/file",
+            "\n".join(["https://example.com"] * 4),
+        )
+        for value in invalid_values:
+            with self.subTest(value=value):
+                with self.assertRaises(ClientError):
+                    parse_extract_urls(value)
 
     def test_execute_sanitizes_api_key(self) -> None:
         response = FakeResponse(b'{"message":"token fake-key was accepted"}')
-        request_value = build_request("tavily_search", {"query": "q"}, "fake-key")
-        with mock.patch("client.request.urlopen", return_value=response):
-            data, request_id = execute(request_value, "fake-key")
+        request_value = build_request(
+            "tavily_search", {"query": "q"}, "fake-key", DEFAULT_BASE_URL, "dify"
+        )
+        with mock.patch("aisa_client.request.urlopen", return_value=response):
+            data, request_id = execute(request_value, "fake-key", 30)
         self.assertEqual(data["message"], "token [REDACTED] was accepted")
         self.assertEqual(request_id, "request-1")
 
@@ -59,10 +88,12 @@ class ClientTests(unittest.TestCase):
             {},
             BytesIO(b'{"message":"bad fake-key"}'),
         )
-        request_value = build_request("tavily_search", {"query": "q"}, "fake-key")
-        with mock.patch("client.request.urlopen", side_effect=http_error):
-            with self.assertRaises(AisaClientError) as context:
-                execute(request_value, "fake-key")
+        request_value = build_request(
+            "tavily_search", {"query": "q"}, "fake-key", DEFAULT_BASE_URL, "dify"
+        )
+        with mock.patch("aisa_client.request.urlopen", side_effect=http_error):
+            with self.assertRaises(ClientError) as context:
+                execute(request_value, "fake-key", 30)
         self.assertNotIn("fake-key", str(context.exception.details))
 
 

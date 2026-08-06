@@ -42,5 +42,5 @@ python -m main
 Package it from the repository root with:
 
 ```bash
-dify plugin package ./dify/aisa-research
+dify plugin package ./plugins/aisa-research/dify
 ```

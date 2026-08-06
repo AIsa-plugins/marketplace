@@ -1,4 +1,4 @@
-version: 0.0.1
+version: 0.1.0
 type: plugin
 author: aisa-plugins
 name: aisa-research
@@ -17,7 +17,7 @@ plugins:
   tools:
     - provider/aisa-research.yaml
 meta:
-  version: 0.0.1
+  version: 0.1.0
   arch:
     - amd64
     - arm64

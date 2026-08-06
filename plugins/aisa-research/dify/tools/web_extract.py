@@ -4,7 +4,7 @@ from typing import Any
 from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 
-from client import AisaClientError, parse_extract_urls
+from aisa_client import ClientError, parse_extract_urls
 from tools.common import invoke_aisa
 
 
@@ -14,7 +14,7 @@ class WebExtractTool(Tool):
     ) -> Generator[ToolInvokeMessage, None, None]:
         try:
             urls = parse_extract_urls(tool_parameters.get("urls"))
-        except AisaClientError as exc:
+        except ClientError as exc:
             yield self.create_json_message(
                 {
                     "ok": False,

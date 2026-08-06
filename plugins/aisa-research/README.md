@@ -95,6 +95,16 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/plugin-creator/scripts/validate_plugin.py" plugins/aisa-research
 ```
 
+## Dify
+
+The Dify Tool Plugin adapter lives in `dify/` and shares the same fixed,
+read-only AISA client implementation as the Codex and Claude Code adapters.
+Package it from the repository root with:
+
+```bash
+dify plugin package ./plugins/aisa-research/dify
+```
+
 When Claude Code is available, also run:
 
 ```bash

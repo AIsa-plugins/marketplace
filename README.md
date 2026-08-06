@@ -51,10 +51,11 @@ X/Twitter search, YouTube search, and Scholar search tools.
 Package it with the Dify Plugin CLI:
 
 ```bash
-dify plugin package ./dify/aisa-research
+dify plugin package ./plugins/aisa-research/dify
 ```
 
-See [dify/aisa-research](dify/aisa-research) for setup and local debugging.
+See [plugins/aisa-research/dify](plugins/aisa-research/dify) for setup and local
+debugging.
 
 ## Repository layout
 
@@ -62,7 +63,7 @@ See [dify/aisa-research](dify/aisa-research) for setup and local debugging.
 .agents/plugins/marketplace.json     Codex marketplace
 .claude-plugin/marketplace.json      Claude Code marketplace
 plugins/aisa-research/               Shared plugin bundle
-dify/aisa-research/                  Dify-specific Tool Plugin
+plugins/aisa-research/dify/          Dify-specific Tool Plugin
 ```
 
 The plugin contains no API keys. Set `AISA_API_KEY` in the environment that
