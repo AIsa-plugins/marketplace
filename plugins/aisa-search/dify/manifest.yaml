@@ -1,4 +1,4 @@
-version: 0.1.0
+version: 0.1.1
 type: plugin
 author: aisa-plugins
 name: aisa-search
@@ -8,8 +8,8 @@ label:
 description:
   en_US: Search across the web, X, YouTube, and Scholar with AISA APIs.
   zh_Hans: 使用 AISA API 搜索网页、X、YouTube 和学术文献。
-icon: icon.svg
-icon_dark: icon-dark.svg
+icon: aisa-logo.png
+icon_dark: aisa-logo.png
 resource:
   memory: 268435456
   permission: {}

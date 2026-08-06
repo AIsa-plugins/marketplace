@@ -11,7 +11,7 @@ then produce a structured brief with direct source links.
 
 - Plugin: `aisa-search`
 - Skill: `research-topic`
-- Version: `0.1.0`
+- Version: `0.1.1`
 - Requirements: Python 3.9+ and an `AISA_API_KEY`
 
 See [plugins/aisa-search](plugins/aisa-search) for configuration, usage,

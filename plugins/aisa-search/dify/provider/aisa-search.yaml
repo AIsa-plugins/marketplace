@@ -7,7 +7,7 @@ identity:
   description:
     en_US: Search the web, X/Twitter, YouTube, and scholarly literature with AISA.
     zh_Hans: 使用 AISA 搜索网页、X/Twitter、YouTube 和学术文献。
-  icon: icon.svg
+  icon: aisa-logo.png
   tags:
     - search
     - productivity
