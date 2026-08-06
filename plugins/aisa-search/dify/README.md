@@ -44,3 +44,12 @@ Package it from the repository root with:
 ```bash
 dify plugin package ./plugins/aisa-search/dify
 ```
+
+## Source Code
+
+- Repository: <https://github.com/AIsa-plugins/marketplace/tree/main/plugins/aisa-search/dify>
+
+## Support
+
+- Email: <developer@aisa.one>
+- Issues: <https://github.com/AIsa-plugins/marketplace/issues>
