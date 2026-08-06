@@ -1,0 +1,26 @@
+identity:
+  name: web_extract
+  author: aisa-plugins
+  label:
+    en_US: Web Extract
+    zh_Hans: 网页提取
+description:
+  human:
+    en_US: Extract readable content from one to three public web pages.
+    zh_Hans: 从一至三个公开网页提取可读内容。
+  llm: Extract the contents of one to three relevant public HTTP or HTTPS URLs.
+parameters:
+  - name: urls
+    type: string
+    required: true
+    label:
+      en_US: URLs
+      zh_Hans: 网页地址
+    human_description:
+      en_US: One to three public URLs, one per line.
+      zh_Hans: 一至三个公开 URL，每行一个。
+    llm_description: One to three public HTTP or HTTPS URLs separated by newlines.
+    form: llm
+extra:
+  python:
+    source: tools/web_extract.py

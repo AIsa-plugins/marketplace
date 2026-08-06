@@ -1,0 +1,26 @@
+identity:
+  name: web_search
+  author: aisa-plugins
+  label:
+    en_US: Web Search
+    zh_Hans: 网页搜索
+description:
+  human:
+    en_US: Search the public web with AISA and return source-linked results.
+    zh_Hans: 使用 AISA 搜索公开网页并返回带来源链接的结果。
+  llm: Search the public web for current information and source links about a topic.
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Search query
+      zh_Hans: 搜索关键词
+    human_description:
+      en_US: The topic or question to search for.
+      zh_Hans: 要搜索的主题或问题。
+    llm_description: A concise and precise web search query.
+    form: llm
+extra:
+  python:
+    source: tools/web_search.py

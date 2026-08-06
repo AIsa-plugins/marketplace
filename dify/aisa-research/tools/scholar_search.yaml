@@ -1,0 +1,26 @@
+identity:
+  name: scholar_search
+  author: aisa-plugins
+  label:
+    en_US: Scholar Search
+    zh_Hans: 学术搜索
+description:
+  human:
+    en_US: Search scholarly literature with AISA.
+    zh_Hans: 使用 AISA 搜索学术文献。
+  llm: Search scholarly literature for papers and evidence relevant to a research topic.
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Research query
+      zh_Hans: 研究关键词
+    human_description:
+      en_US: The scholarly topic or question to search for.
+      zh_Hans: 要搜索的学术主题或问题。
+    llm_description: A focused scholarly literature search query.
+    form: llm
+extra:
+  python:
+    source: tools/scholar_search.py

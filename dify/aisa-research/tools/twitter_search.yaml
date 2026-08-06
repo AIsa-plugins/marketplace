@@ -1,0 +1,26 @@
+identity:
+  name: twitter_search
+  author: aisa-plugins
+  label:
+    en_US: X/Twitter Search
+    zh_Hans: X/Twitter 搜索
+description:
+  human:
+    en_US: Search public X/Twitter posts with AISA.
+    zh_Hans: 使用 AISA 搜索公开的 X/Twitter 帖子。
+  llm: Search public X/Twitter posts for current discussions, opinions, and evidence.
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Search query
+      zh_Hans: 搜索关键词
+    human_description:
+      en_US: An X/Twitter advanced search query.
+      zh_Hans: X/Twitter 高级搜索语句。
+    llm_description: An X/Twitter search expression matching the requested topic.
+    form: llm
+extra:
+  python:
+    source: tools/twitter_search.py

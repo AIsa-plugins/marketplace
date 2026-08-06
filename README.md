@@ -42,12 +42,27 @@ codex plugin add aisa-research@aisa
 
 Start a new Codex task after installation so bundled Skills are discovered.
 
+## Develop for Dify
+
+The Dify implementation is a host-specific Tool Plugin kept separate from the
+shared Codex and Claude Code bundle. It provides web search, web extraction,
+X/Twitter search, YouTube search, and Scholar search tools.
+
+Package it with the Dify Plugin CLI:
+
+```bash
+dify plugin package ./dify/aisa-research
+```
+
+See [dify/aisa-research](dify/aisa-research) for setup and local debugging.
+
 ## Repository layout
 
 ```text
 .agents/plugins/marketplace.json     Codex marketplace
 .claude-plugin/marketplace.json      Claude Code marketplace
 plugins/aisa-research/               Shared plugin bundle
+dify/aisa-research/                  Dify-specific Tool Plugin
 ```
 
 The plugin contains no API keys. Set `AISA_API_KEY` in the environment that

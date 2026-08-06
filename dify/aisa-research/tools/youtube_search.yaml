@@ -1,0 +1,26 @@
+identity:
+  name: youtube_search
+  author: aisa-plugins
+  label:
+    en_US: YouTube Search
+    zh_Hans: YouTube 搜索
+description:
+  human:
+    en_US: Search YouTube videos and channels with AISA.
+    zh_Hans: 使用 AISA 搜索 YouTube 视频和频道。
+  llm: Search YouTube for relevant videos, channels, and source links about a topic.
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Search query
+      zh_Hans: 搜索关键词
+    human_description:
+      en_US: The topic to search for on YouTube.
+      zh_Hans: 要在 YouTube 上搜索的主题。
+    llm_description: A concise YouTube search query matching the requested topic.
+    form: llm
+extra:
+  python:
+    source: tools/youtube_search.py
