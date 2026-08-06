@@ -63,7 +63,7 @@ class AisaAPIClientTests(unittest.TestCase):
         self.assertEqual(req.get_method(), "POST")
         self.assertEqual(req.full_url, "https://api.aisa.one/apis/v1/tavily/search")
         self.assertEqual(req.get_header("Authorization"), "Bearer secret-key")
-        self.assertEqual(req.get_header("User-agent"), "openai-codex/aisa-research/0.1.0")
+        self.assertEqual(req.get_header("User-agent"), "openai-codex/aisa-search/0.1.0")
         self.assertEqual(json.loads(req.data), {"query": "AI agents", "max_results": 5})
 
     def test_claude_get_request_encodes_query(self):
@@ -77,7 +77,7 @@ class AisaAPIClientTests(unittest.TestCase):
         self.assertEqual(req.get_method(), "GET")
         self.assertIn("query=agent+lang%3Aen", req.full_url)
         self.assertIn("queryType=Latest", req.full_url)
-        self.assertEqual(req.get_header("User-agent"), "claude-code/aisa-research/0.1.0")
+        self.assertEqual(req.get_header("User-agent"), "claude-code/aisa-search/0.1.0")
 
     def test_scholar_uses_form_query_and_url_options(self):
         req = aisa_api.build_request(

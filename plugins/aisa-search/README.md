@@ -1,7 +1,7 @@
-# AISA Research
+# AISA Search
 
-`aisa-research` is a minimal Codex and Claude Code plugin for researching one
-topic across Tavily web search, X/Twitter, YouTube, and Scholar. It uses one
+`aisa-search` is a minimal Codex and Claude Code plugin for searching one topic
+across Tavily web search, X/Twitter, YouTube, and Scholar. It uses one
 shared Skill and a dependency-free Python client with a fixed read-only API
 allowlist.
 
@@ -22,7 +22,7 @@ export AISA_API_KEY="your-key"
 
 ```bash
 codex plugin marketplace add AIsa-plugins/marketplace
-codex plugin add aisa-research@aisa
+codex plugin add aisa-search@aisa
 ```
 
 Start a new Codex task after installing so the new Skill is discovered.
@@ -33,13 +33,13 @@ With Claude Code installed:
 
 ```bash
 claude plugin marketplace add AIsa-plugins/marketplace
-claude plugin install aisa-research@aisa
+claude plugin install aisa-search@aisa
 ```
 
 For a one-session development load, use:
 
 ```bash
-claude --plugin-dir ./plugins/aisa-research
+claude --plugin-dir ./plugins/aisa-search
 ```
 
 The Claude marketplace format follows the official
@@ -53,7 +53,7 @@ Ask naturally, for example:
 > Scholar. Return a concise brief with source links.
 
 Codex can invoke `$research-topic`; Claude Code exposes the namespaced
-`/aisa-research:research-topic` Skill.
+`/aisa-search:research-topic` Skill.
 
 The default workflow makes one request per source. Tavily extraction is only
 used for an explicit deep-research request and accepts at most three public
@@ -90,9 +90,9 @@ upstream failure. API keys are never written to output.
 From the repository root:
 
 ```bash
-python3 -m unittest discover -s plugins/aisa-research/tests -v
-python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" plugins/aisa-research/skills/research-topic
-python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/plugin-creator/scripts/validate_plugin.py" plugins/aisa-research
+python3 -m unittest discover -s plugins/aisa-search/tests -v
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" plugins/aisa-search/skills/research-topic
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/plugin-creator/scripts/validate_plugin.py" plugins/aisa-search
 ```
 
 ## Dify
@@ -102,7 +102,7 @@ read-only AISA client implementation as the Codex and Claude Code adapters.
 Package it from the repository root with:
 
 ```bash
-dify plugin package ./plugins/aisa-research/dify
+dify plugin package ./plugins/aisa-search/dify
 ```
 
 When Claude Code is available, also run:

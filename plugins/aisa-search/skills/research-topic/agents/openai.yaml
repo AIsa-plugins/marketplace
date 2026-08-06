@@ -1,5 +1,5 @@
 interface:
-  display_name: "AISA Research"
+  display_name: "AISA Search"
   short_description: "Research across web, X, YouTube, and Scholar"
   default_prompt: "Use $research-topic to research this topic across web, X, YouTube, and Scholar with source links."
 policy:

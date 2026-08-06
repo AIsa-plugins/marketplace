@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-PLUGIN_ROOT = REPO_ROOT / "plugins" / "aisa-research"
+PLUGIN_ROOT = REPO_ROOT / "plugins" / "aisa-search"
 
 
 class ManifestTests(unittest.TestCase):
@@ -23,7 +23,7 @@ class ManifestTests(unittest.TestCase):
         self.assertEqual(codex["version"].split("+", 1)[0], "0.1.0")
         self.assertEqual(claude["version"], "0.1.0")
         self.assertTrue(dify_manifest.startswith("version: 0.1.0\n"))
-        self.assertIn("\nname: aisa-research\n", dify_manifest)
+        self.assertIn("\nname: aisa-search\n", dify_manifest)
         self.assertEqual(codex["skills"], "./skills/")
 
     def test_marketplaces_point_to_the_same_plugin(self):
@@ -31,9 +31,9 @@ class ManifestTests(unittest.TestCase):
         claude = self.load_json(REPO_ROOT / ".claude-plugin" / "marketplace.json")
         self.assertEqual(codex["name"], "aisa")
         self.assertEqual(claude["name"], "aisa")
-        self.assertEqual(codex["plugins"][0]["name"], "aisa-research")
-        self.assertEqual(codex["plugins"][0]["source"]["path"], "./plugins/aisa-research")
-        self.assertEqual(claude["plugins"][0]["source"], "./plugins/aisa-research")
+        self.assertEqual(codex["plugins"][0]["name"], "aisa-search")
+        self.assertEqual(codex["plugins"][0]["source"]["path"], "./plugins/aisa-search")
+        self.assertEqual(claude["plugins"][0]["source"], "./plugins/aisa-search")
         self.assertEqual(
             codex["plugins"][0]["policy"],
             {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},

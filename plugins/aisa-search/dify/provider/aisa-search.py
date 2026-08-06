@@ -4,7 +4,7 @@ from dify_plugin import ToolProvider
 from dify_plugin.errors.tool import ToolProviderCredentialValidationError
 
 
-class AisaResearchProvider(ToolProvider):
+class AisaSearchProvider(ToolProvider):
     def _validate_credentials(self, credentials: dict[str, Any]) -> None:
         api_key = credentials.get("aisa_api_key")
         if not isinstance(api_key, str) or not api_key.strip():

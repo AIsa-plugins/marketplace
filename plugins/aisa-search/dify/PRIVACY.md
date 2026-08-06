@@ -2,7 +2,7 @@
 
 ## Data processed
 
-AISA Research processes the search queries, public web URLs, and search options
+AISA Search processes the search queries, public web URLs, and search options
 that a user or a Dify application supplies to a tool. User-provided text may
 contain personal data, so users should avoid submitting sensitive information
 that is not necessary for their research request.

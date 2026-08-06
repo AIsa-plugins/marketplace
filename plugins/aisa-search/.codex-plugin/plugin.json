@@ -1,7 +1,7 @@
 {
-  "name": "aisa-research",
-  "version": "0.1.0",
-  "description": "Research a topic across the web, X, YouTube, and Scholar with AISA APIs.",
+  "name": "aisa-search",
+  "version": "0.1.0+codex.20260806072801",
+  "description": "Search across the web, X, YouTube, and Scholar with AISA APIs.",
   "author": {
     "name": "AIsa Team",
     "email": "developer@aisa.one",
@@ -18,9 +18,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AISA Research",
-    "shortDescription": "Multi-source research with linked evidence.",
-    "longDescription": "Research a topic across Tavily web search, X, YouTube, and Scholar, then synthesize a structured brief with source links and clearly marked coverage gaps.",
+    "displayName": "AISA Search",
+    "shortDescription": "Multi-source search with linked evidence.",
+    "longDescription": "Search across Tavily web results, X, YouTube, and Scholar, then synthesize a structured brief with source links and clearly marked coverage gaps.",
     "developerName": "AIsa Team",
     "category": "Productivity",
     "capabilities": [

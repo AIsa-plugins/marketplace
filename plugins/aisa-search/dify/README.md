@@ -1,6 +1,6 @@
-# AISA Research
+# AISA Search
 
-AISA Research adds five read-only research tools to Dify: web search, web
+AISA Search adds five read-only search tools to Dify: web search, web
 extraction, X/Twitter search, YouTube search, and scholarly literature search.
 The tools return structured JSON with source links for use by Agents and
 Workflows.
@@ -42,5 +42,5 @@ python -m main
 Package it from the repository root with:
 
 ```bash
-dify plugin package ./plugins/aisa-research/dify
+dify plugin package ./plugins/aisa-search/dify
 ```

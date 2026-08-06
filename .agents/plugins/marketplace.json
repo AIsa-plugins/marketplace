@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "aisa-research",
+      "name": "aisa-search",
       "source": {
         "source": "local",
-        "path": "./plugins/aisa-research"
+        "path": "./plugins/aisa-search"
       },
       "policy": {
         "installation": "AVAILABLE",

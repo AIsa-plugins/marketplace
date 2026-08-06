@@ -1,12 +1,12 @@
 identity:
   author: aisa-plugins
-  name: aisa-research
+  name: aisa-search
   label:
-    en_US: AISA Research
-    zh_Hans: AISA 研究
+    en_US: AISA Search
+    zh_Hans: AISA 搜索
   description:
-    en_US: Research the web, X/Twitter, YouTube, and scholarly literature with AISA.
-    zh_Hans: 使用 AISA 研究网页、X/Twitter、YouTube 和学术文献。
+    en_US: Search the web, X/Twitter, YouTube, and scholarly literature with AISA.
+    zh_Hans: 使用 AISA 搜索网页、X/Twitter、YouTube 和学术文献。
   icon: icon.svg
   tags:
     - search
@@ -33,4 +33,4 @@ tools:
   - tools/scholar_search.yaml
 extra:
   python:
-    source: provider/aisa-research.py
+    source: provider/aisa-search.py

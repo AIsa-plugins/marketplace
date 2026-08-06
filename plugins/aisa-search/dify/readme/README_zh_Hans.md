@@ -1,6 +1,6 @@
-# AISA Research
+# AISA Search
 
-AISA Research 为 Dify 提供五个只读研究工具：网页搜索、网页内容提取、
+AISA Search 为 Dify 提供五个只读搜索工具：网页搜索、网页内容提取、
 X/Twitter 搜索、YouTube 搜索和学术文献搜索。工具返回带来源链接的结构化
 JSON，可供 Agent 和 Workflow 使用。
 

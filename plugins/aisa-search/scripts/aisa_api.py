@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CLI adapter for the shared, read-only AISA Research client."""
+"""CLI adapter for the shared, read-only AISA Search client."""
 
 from __future__ import annotations
 
@@ -76,7 +76,7 @@ def write_json(stream: TextIO, value: Mapping[str, Any]) -> None:
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Call one fixed, read-only AISA Research operation using JSON from stdin."
+        description="Call one fixed, read-only AISA Search operation using JSON from stdin."
     )
     parser.add_argument("operation", choices=sorted(OPERATIONS))
     args = parser.parse_args(list(argv) if argv is not None else None)

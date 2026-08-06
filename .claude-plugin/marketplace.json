@@ -8,9 +8,9 @@
   },
   "plugins": [
     {
-      "name": "aisa-research",
-      "source": "./plugins/aisa-research",
-      "description": "Research across the web, X, YouTube, and Scholar with linked evidence.",
+      "name": "aisa-search",
+      "source": "./plugins/aisa-search",
+      "description": "Search across the web, X, YouTube, and Scholar with linked evidence.",
       "category": "Productivity",
       "tags": ["research", "search"]
     }

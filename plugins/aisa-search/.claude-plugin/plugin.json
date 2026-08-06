@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "aisa-research",
-  "displayName": "AISA Research",
+  "name": "aisa-search",
+  "displayName": "AISA Search",
   "version": "0.1.0",
-  "description": "Research a topic across the web, X, YouTube, and Scholar with AISA APIs.",
+  "description": "Search across the web, X, YouTube, and Scholar with AISA APIs.",
   "author": {
     "name": "AIsa Team",
     "email": "developer@aisa.one"

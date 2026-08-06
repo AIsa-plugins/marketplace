@@ -1,4 +1,4 @@
-"""Shared, dependency-free client for the read-only AISA Research API."""
+"""Shared, dependency-free client for the read-only AISA Search API."""
 
 from __future__ import annotations
 
@@ -149,10 +149,10 @@ def validate_base_url(base_url: str) -> str:
 
 def user_agent_for(host: str) -> str:
     if host == "claude_code":
-        return "claude-code/aisa-research/" + VERSION
+        return "claude-code/aisa-search/" + VERSION
     if host == "dify":
-        return "dify/aisa-research/" + VERSION
-    return "openai-codex/aisa-research/" + VERSION
+        return "dify/aisa-search/" + VERSION
+    return "openai-codex/aisa-search/" + VERSION
 
 
 def _query_pairs(payload: Mapping[str, Any]) -> Iterable[Tuple[str, Any]]:

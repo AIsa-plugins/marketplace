@@ -1,13 +1,13 @@
 version: 0.1.0
 type: plugin
 author: aisa-plugins
-name: aisa-research
+name: aisa-search
 label:
-  en_US: AISA Research
-  zh_Hans: AISA 研究
+  en_US: AISA Search
+  zh_Hans: AISA 搜索
 description:
-  en_US: Research topics across the web, X, YouTube, and Scholar with AISA APIs.
-  zh_Hans: 使用 AISA API 研究网页、X、YouTube 和学术文献中的主题。
+  en_US: Search across the web, X, YouTube, and Scholar with AISA APIs.
+  zh_Hans: 使用 AISA API 搜索网页、X、YouTube 和学术文献。
 icon: icon.svg
 icon_dark: icon-dark.svg
 resource:
@@ -15,7 +15,7 @@ resource:
   permission: {}
 plugins:
   tools:
-    - provider/aisa-research.yaml
+    - provider/aisa-search.yaml
 meta:
   version: 0.1.0
   arch:
