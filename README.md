@@ -1,10 +1,10 @@
-# AISA Plugins Marketplace
+# AIsa Plugins Marketplace
 
-Public marketplace for agent plugins maintained by AISA.
+Public marketplace for agent plugins maintained by AIsa.
 
 ## Available plugins
 
-### AISA Search
+### AIsa Search
 
 Search a topic across Tavily web search, X/Twitter, YouTube, and Scholar,
 then produce a structured brief with direct source links.

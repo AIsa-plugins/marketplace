@@ -1,6 +1,6 @@
-# AISA Search
+# AIsa Search
 
-AISA Search adds five read-only search tools to Dify: web search, web
+AIsa Search adds five read-only search tools to Dify: web search, web
 extraction, X/Twitter search, YouTube search, and scholarly literature search.
 The tools return structured JSON with source links for use by Agents and
 Workflows.
@@ -8,11 +8,11 @@ Workflows.
 ## Requirements
 
 - A Dify installation that supports Python 3.12 plugins
-- An AISA API key from <https://console.aisa.one>
+- An AIsa API key from <https://console.aisa.one>
 
 ## Setup
 
-Install the plugin and enter your AISA API key when Dify requests provider
+Install the plugin and enter your AIsa API key when Dify requests provider
 credentials. The key is sent only as a bearer credential to
 `https://api.aisa.one` and is never included in tool output.
 

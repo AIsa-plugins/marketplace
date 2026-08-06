@@ -3,11 +3,11 @@ type: plugin
 author: aisa-plugins
 name: aisa-search
 label:
-  en_US: AISA Search
-  zh_Hans: AISA 搜索
+  en_US: AIsa Search
+  zh_Hans: AIsa 搜索
 description:
-  en_US: Search across the web, X, YouTube, and Scholar with AISA APIs.
-  zh_Hans: 使用 AISA API 搜索网页、X、YouTube 和学术文献。
+  en_US: Search across the web, X, YouTube, and Scholar with AIsa APIs.
+  zh_Hans: 使用 AIsa API 搜索网页、X、YouTube 和学术文献。
 icon: aisa-logo.png
 icon_dark: aisa-logo.png
 resource:

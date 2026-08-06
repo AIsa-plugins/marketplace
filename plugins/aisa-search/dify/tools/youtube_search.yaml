@@ -6,8 +6,8 @@ identity:
     zh_Hans: YouTube 搜索
 description:
   human:
-    en_US: Search YouTube videos and channels with AISA.
-    zh_Hans: 使用 AISA 搜索 YouTube 视频和频道。
+    en_US: Search YouTube videos and channels with AIsa.
+    zh_Hans: 使用 AIsa 搜索 YouTube 视频和频道。
   llm: Search YouTube for relevant videos, channels, and source links about a topic.
 parameters:
   - name: query

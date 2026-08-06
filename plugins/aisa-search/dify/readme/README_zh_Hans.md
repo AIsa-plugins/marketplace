@@ -1,12 +1,12 @@
-# AISA Search
+# AIsa Search
 
-AISA Search 为 Dify 提供五个只读搜索工具：网页搜索、网页内容提取、
+AIsa Search 为 Dify 提供五个只读搜索工具：网页搜索、网页内容提取、
 X/Twitter 搜索、YouTube 搜索和学术文献搜索。工具返回带来源链接的结构化
 JSON，可供 Agent 和 Workflow 使用。
 
 ## 配置
 
-从 <https://console.aisa.one> 获取 AISA API Key。安装插件后，在 Dify 的
+从 <https://console.aisa.one> 获取 AIsa API Key。安装插件后，在 Dify 的
 Provider 凭据界面输入密钥。密钥只作为 Bearer 凭据发送到
 `https://api.aisa.one`，不会包含在工具输出中。
 

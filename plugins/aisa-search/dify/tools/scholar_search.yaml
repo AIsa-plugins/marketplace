@@ -6,8 +6,8 @@ identity:
     zh_Hans: 学术搜索
 description:
   human:
-    en_US: Search scholarly literature with AISA.
-    zh_Hans: 使用 AISA 搜索学术文献。
+    en_US: Search scholarly literature with AIsa.
+    zh_Hans: 使用 AIsa 搜索学术文献。
   llm: Search scholarly literature for papers and evidence relevant to a research topic.
 parameters:
   - name: query

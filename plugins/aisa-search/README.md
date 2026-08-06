@@ -1,4 +1,4 @@
-# AISA Search
+# AIsa Search
 
 `aisa-search` is a minimal Codex and Claude Code plugin for searching one topic
 across Tavily web search, X/Twitter, YouTube, and Scholar. It uses one
@@ -8,7 +8,7 @@ allowlist.
 ## Requirements
 
 - Python 3.9 or newer
-- An AISA API key from <https://console.aisa.one>
+- An AIsa API key from <https://console.aisa.one>
 
 Export the key in the shell that launches your agent:
 
@@ -98,7 +98,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/plugin-creator/scripts/valid
 ## Dify
 
 The Dify Tool Plugin adapter lives in `dify/` and shares the same fixed,
-read-only AISA client implementation as the Codex and Claude Code adapters.
+read-only AIsa client implementation as the Codex and Claude Code adapters.
 Package it from the repository root with:
 
 ```bash

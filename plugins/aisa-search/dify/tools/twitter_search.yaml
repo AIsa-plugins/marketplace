@@ -6,8 +6,8 @@ identity:
     zh_Hans: X/Twitter 搜索
 description:
   human:
-    en_US: Search public X/Twitter posts with AISA.
-    zh_Hans: 使用 AISA 搜索公开的 X/Twitter 帖子。
+    en_US: Search public X/Twitter posts with AIsa.
+    zh_Hans: 使用 AIsa 搜索公开的 X/Twitter 帖子。
   llm: Search public X/Twitter posts for current discussions, opinions, and evidence.
 parameters:
   - name: query

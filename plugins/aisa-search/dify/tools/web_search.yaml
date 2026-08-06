@@ -6,8 +6,8 @@ identity:
     zh_Hans: 网页搜索
 description:
   human:
-    en_US: Search the public web with AISA and return source-linked results.
-    zh_Hans: 使用 AISA 搜索公开网页并返回带来源链接的结果。
+    en_US: Search the public web with AIsa and return source-linked results.
+    zh_Hans: 使用 AIsa 搜索公开网页并返回带来源链接的结果。
   llm: Search the public web for current information and source links about a topic.
 parameters:
   - name: query

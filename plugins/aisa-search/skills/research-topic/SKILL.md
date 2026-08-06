@@ -1,11 +1,11 @@
 ---
 name: research-topic
-description: Research a topic across current web results, X/Twitter posts, YouTube results, and Scholar sources through the AISA API, then produce a structured brief with source links. Use when a user asks for multi-source research, market or trend research, evidence gathering, cross-source comparison, a cited research brief, or a deep research pass that extracts a few public web pages.
+description: Research a topic across current web results, X/Twitter posts, YouTube results, and Scholar sources through the AIsa API, then produce a structured brief with source links. Use when a user asks for multi-source research, market or trend research, evidence gathering, cross-source comparison, a cited research brief, or a deep research pass that extracts a few public web pages.
 ---
 
 # Research Topic
 
-Use the bundled `scripts/aisa_api.py` helper for every AISA request. Do not call arbitrary API paths or add write operations.
+Use the bundled `scripts/aisa_api.py` helper for every AIsa request. Do not call arbitrary API paths or add write operations.
 
 ## Prepare
 
