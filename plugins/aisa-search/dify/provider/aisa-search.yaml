@@ -2,11 +2,11 @@ identity:
   author: aisa-plugins
   name: aisa-search
   label:
-    en_US: AISA Search
-    zh_Hans: AISA 搜索
+    en_US: AIsa Search
+    zh_Hans: AIsa 搜索
   description:
-    en_US: Search the web, X/Twitter, YouTube, and scholarly literature with AISA.
-    zh_Hans: 使用 AISA 搜索网页、X/Twitter、YouTube 和学术文献。
+    en_US: Search the web, X/Twitter, YouTube, and scholarly literature with AIsa.
+    zh_Hans: 使用 AIsa 搜索网页、X/Twitter、YouTube 和学术文献。
   icon: aisa-logo.png
   tags:
     - search
@@ -16,14 +16,14 @@ credentials_for_provider:
     type: secret-input
     required: true
     label:
-      en_US: AISA API Key
-      zh_Hans: AISA API 密钥
+      en_US: AIsa API Key
+      zh_Hans: AIsa API 密钥
     placeholder:
-      en_US: Enter your AISA API key
-      zh_Hans: 请输入 AISA API 密钥
+      en_US: Enter your AIsa API key
+      zh_Hans: 请输入 AIsa API 密钥
     help:
-      en_US: Get an API key from the AISA Console.
-      zh_Hans: 从 AISA Console 获取 API 密钥。
+      en_US: Get an API key from the AIsa Console.
+      zh_Hans: 从 AIsa Console 获取 API 密钥。
     url: https://console.aisa.one
 tools:
   - tools/web_search.yaml

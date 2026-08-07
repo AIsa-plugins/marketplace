@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "aisa",
-  "description": "AISA public plugin marketplace — research, search, and productivity tools.",
+  "description": "AIsa public plugin marketplace — research, search, and productivity tools.",
   "owner": {
     "name": "AIsa Team",
     "email": "developer@aisa.one"

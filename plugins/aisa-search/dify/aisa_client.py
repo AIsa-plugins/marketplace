@@ -1,4 +1,4 @@
-"""Shared, dependency-free client for the read-only AISA Search API."""
+"""Shared, dependency-free client for the read-only AIsa Search API."""
 
 from __future__ import annotations
 
@@ -218,7 +218,7 @@ def _read_limited(response: Any) -> bytes:
     body = response.read(MAX_RESPONSE_BYTES + 1)
     if len(body) > MAX_RESPONSE_BYTES:
         raise ClientError(
-            EXIT_UPSTREAM, "response_too_large", "AISA response exceeded 5 MiB."
+            EXIT_UPSTREAM, "response_too_large", "AIsa response exceeded 5 MiB."
         )
     return body
 
@@ -228,7 +228,7 @@ def _decode_json(body: bytes) -> Any:
         return json.loads(body.decode("utf-8"))
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
         raise ClientError(
-            EXIT_UPSTREAM, "invalid_response", "AISA returned a non-JSON response."
+            EXIT_UPSTREAM, "invalid_response", "AIsa returned a non-JSON response."
         ) from exc
 
 
@@ -260,7 +260,7 @@ def execute(request_value: request.Request, api_key: str, timeout: int) -> Tuple
         raise ClientError(
             exit_code,
             error_type,
-            "AISA request failed with HTTP status " + str(exc.code) + ".",
+            "AIsa request failed with HTTP status " + str(exc.code) + ".",
             http_status=exc.code,
             details=details,
         ) from exc
@@ -268,7 +268,7 @@ def execute(request_value: request.Request, api_key: str, timeout: int) -> Tuple
         raise ClientError(
             EXIT_UPSTREAM,
             "network_error",
-            "Could not reach AISA before the request timed out.",
+            "Could not reach AIsa before the request timed out.",
         ) from exc
     return _sanitize(_decode_json(body), api_key), request_id
 
@@ -296,7 +296,7 @@ def invoke(
 ) -> Dict[str, Any]:
     key = api_key.strip()
     if not key:
-        raise ClientError(EXIT_INPUT, "invalid_credentials", "AISA API key is required.")
+        raise ClientError(EXIT_INPUT, "invalid_credentials", "AIsa API key is required.")
     origin = validate_base_url(base_url)
     request_value = build_request(operation_name, payload, key, origin, host)
     data, request_id = execute(request_value, key, timeout)
