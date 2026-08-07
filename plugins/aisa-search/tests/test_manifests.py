@@ -20,9 +20,9 @@ class ManifestTests(unittest.TestCase):
         )
         self.assertEqual(codex["name"], PLUGIN_ROOT.name)
         self.assertEqual(claude["name"], PLUGIN_ROOT.name)
-        self.assertEqual(codex["version"].split("+", 1)[0], "0.1.1")
-        self.assertEqual(claude["version"], "0.1.1")
-        self.assertTrue(dify_manifest.startswith("version: 0.1.1\n"))
+        self.assertEqual(codex["version"].split("+", 1)[0], "0.1.2")
+        self.assertEqual(claude["version"], "0.1.2")
+        self.assertTrue(dify_manifest.startswith("version: 0.1.2\n"))
         self.assertIn("\nname: aisa-search\n", dify_manifest)
         self.assertEqual(codex["skills"], "./skills/")
 

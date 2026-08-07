@@ -9,7 +9,7 @@ from typing import Any, Dict, Iterable, Mapping, Optional, Tuple
 from urllib import error, parse, request
 
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 DEFAULT_BASE_URL = "https://api.aisa.one"
 DEFAULT_TIMEOUT_SECONDS = 30
 MAX_RESPONSE_BYTES = 5 * 1024 * 1024

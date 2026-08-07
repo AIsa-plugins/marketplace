@@ -48,7 +48,7 @@ class ClientTests(unittest.TestCase):
         )
         self.assertEqual(request_value.get_header("Authorization"), "Bearer fake-key")
         self.assertEqual(
-            request_value.get_header("User-agent"), "dify/aisa-search/0.1.1"
+            request_value.get_header("User-agent"), "dify/aisa-search/0.1.2"
         )
         self.assertEqual(json.loads(request_value.data), {"query": "dify plugins"})
 
